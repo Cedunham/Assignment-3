@@ -184,6 +184,44 @@ S: 5.5 work, 2 hw, <mark> 3 eat + tv</mark> , 7 sleep, <mark> 1.5 exercise</mark
   <rect width="225" height="100" style="fill:lightpink;stroke-width:3;stroke:rgb(0,0,0)" />
   </svg>
 </g>
+<br>
+<br>
+<h10> The End</h10>
+<style>
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: black;
+  animation-name: example;
+
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button> 
+</p>
+
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 900) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.right = pos + 'px'; 
+    }
+  }
+}
+</script>
+
 
 </body>
 
